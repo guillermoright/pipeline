@@ -6,7 +6,7 @@ pipeline {
             
             steps {
 
-              sh "git clone https://github.com/guillermoright/envoydapr.git"
+             git credentialsId: 'azureRtecspe', url: 'https://i3tv-rtecspe.visualstudio.com/Promociones/_git/Promociones'
   }
       
         }
