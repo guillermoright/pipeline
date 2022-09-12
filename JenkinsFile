@@ -5,7 +5,7 @@ pipeline {
          stage('GitClone') {
             
             steps {
-
+             deleteDir()
              checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [[$class: 'SparseCheckoutPaths', sparseCheckoutPaths: [[path: '/src/Programacion/'],[path: '/Deploy/'], [path: '/Integracion/'], [path: '/src/Shared/'], [path: '/EventosUI/']]]], userRemoteConfigs: [[credentialsId: 'azureRtecspe', url: 'https://i3tv-rtecspe.visualstudio.com/Producci%C3%B3n%20y%20Emisi%C3%B3n/_git/Producci%C3%B3n%20y%20Emisi%C3%B3n']]])
   }
       
