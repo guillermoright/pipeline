@@ -6,7 +6,7 @@ pipeline {
             
             steps {
 
-             git credentialsId: 'azureRtecspe', url: 'https://i3tv-rtecspe.visualstudio.com/Promociones/_git/Promociones'
+             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'azureRtecspe', url: 'https://i3tv-rtecspe.visualstudio.com/Promociones/_git/Promociones']]])
   }
       
         }
